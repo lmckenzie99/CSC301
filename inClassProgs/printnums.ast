@@ -1,0 +1,16 @@
+-- define a list
+-- define a function that given a list will print the elements of the list
+
+load system io.
+
+function print_elements with l do
+  for e in l do
+    io @println (e).
+  end
+end
+
+let g = [1,2,3,4].
+
+print_elements(g).
+
+

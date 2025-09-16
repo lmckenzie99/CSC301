@@ -1,0 +1,11 @@
+load system io.
+
+function print_nums with l do
+  for e in l do
+    io @println (e).
+  end
+end
+
+let g = [10 to 1 step -1].
+
+print_nums(g).
