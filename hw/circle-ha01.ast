@@ -1,0 +1,52 @@
+-- the circle object for assignment 1
+
+load system io.
+load system math.
+
+structure Circle with
+   data center.
+   data radius.
+   function circumfrence with none do
+      return 2.0 * math@pi * this@radius.
+   end
+    function area with none do
+        return math@pi * (this@radius * this@radius).
+    end
+end
+
+--assignment 1
+
+let o1 = Circle(2, 3.0).
+let o2 = Circle(5, 7.0).
+
+io @println "Circle 1 area and circumfrence:".
+io @println(o1@area()).
+io @println(o1@circumfrence()).
+
+io @println "\nCircle 2 area and circumfrence:".
+io @println(o2@area()).
+io @println(o2@circumfrence()).
+
+
+--extra credit
+-- list of 5 circle objects, find the one with the largest area
+let circles = [
+  Circle(2, 3.0),
+  Circle(5, 7.0),
+  Circle(4, 9.0),
+  Circle(6, 8.0),
+  Circle(3, 5.0)
+].
+function findLargestCircle with circles do
+   let largest_circle = circles@(0).
+   for i in 0 to 4 do
+      if circles@(i)@area() > largest_circle@area() do
+         let largest_circle = circles@(i).
+      end
+   end
+    return largest_circle.
+end
+
+let largest = findLargestCircle(circles).
+io @println "\nThe largest circle has area:".
+io @println(largest@area()).
