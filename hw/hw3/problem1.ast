@@ -1,0 +1,20 @@
+--square function using multi-dispatch and recursion
+load system io.
+
+function square
+  with [] do
+    []
+  with [a] do
+    [a*a]
+  with [a|b|rest] do
+    function sq_help
+      with [] do
+        []
+      with [x|xs] do
+        [x*x] + sq_help(xs)
+    end
+    sq_help([a|b|rest])
+    end
+
+io @println(square([1,2,3])).
+io @println(square([0,-1,-2])).

@@ -1,0 +1,25 @@
+load system io.
+
+function member
+   with (list, m) do
+      function dispatch
+         with [] do
+            function check_mem
+               with m do
+                  false
+            end
+            check_mem
+         with [a|rest] do
+            function check_mem
+               with m do
+                  true if a == m
+                  else
+                     dispatch(rest)(m)
+            end
+            check_mem
+      end
+      dispatch(list)(m)
+   end
+
+io @println(member([1,2,3], 2)).
+io @println(member([1,2,3], 5)).

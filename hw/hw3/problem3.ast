@@ -1,0 +1,31 @@
+load system io.
+
+function average
+  with input do
+    function sum
+      with [] do
+        0
+      with [a|rest] do
+        a + sum(rest)
+      end
+    function length
+      with [] do
+        0
+      with [a|rest] do
+        1 + length(rest)
+    end
+  sum(input)/ length(input)
+end
+
+let l = [1,2,3].
+assert(average(l) == 2).
+assert(average([])).
+
+-- the program will return an error because [] is of type none and arithmetic operations
+-- cannot be performed on null values. a quick fix for this would be 
+
+--function average
+--with [] do
+-- 0
+
+--as the opening lines of the function in order to catch null values and return 0.
