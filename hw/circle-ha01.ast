@@ -26,8 +26,6 @@ io @println(o1@circumfrence()).
 io @println "\nCircle 2 area and circumfrence:".
 io @println(o2@area()).
 io @println(o2@circumfrence()).
-
-
 --extra credit
 -- list of 5 circle objects, find the one with the largest area
 let circles = [

@@ -1,0 +1,11 @@
+-- write a function that given a list of integers returns a list where each value is multiplied by 2
+load system io.
+--write function
+function listmult
+with [] do
+  []
+with l do
+  return [hd(l) * 2] + listmult(tl(l)).
+end
+
+io @println (listmult([1,2,3])).

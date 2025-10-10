@@ -1,0 +1,10 @@
+load system io.
+
+function listcount
+  with [] do
+    0
+  with l do
+    1 + listcount(tl(l)).
+end
+
+io @println (listcount([1, 2, 3, 4, 5])).
