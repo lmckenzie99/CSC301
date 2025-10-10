@@ -1,0 +1,24 @@
+load system io.
+
+function reverse
+  with input do
+    function rev_help
+      with [] do
+        function acc_help
+          with acc do
+            acc
+        end
+        acc_help
+      with [a|rest] do
+        function acc_help
+           with acc do
+              rev_help(rest)([a]+acc)
+        end
+        acc_help
+      end
+      rev_help(input)([])
+    end
+
+io @println(reverse([1,2,3])).
+io @println(reverse([])).
+
