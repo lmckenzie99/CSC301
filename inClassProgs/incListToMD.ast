@@ -1,0 +1,14 @@
+load system io.
+
+function inc_list_r
+  with [] do
+    []
+  with [a|b] do
+    [a+1] + inc_list_r(b)
+end
+
+
+
+let out = inc_list_r([1,2,3]).
+io @println(out).
+

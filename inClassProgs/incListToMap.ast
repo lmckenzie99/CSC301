@@ -1,0 +1,7 @@
+load system io.
+
+let inp = [1,2,3].
+
+let out  = inp @map(lambda with x do x+1).
+
+io @println(out).

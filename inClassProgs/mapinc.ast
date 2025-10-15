@@ -1,0 +1,20 @@
+load system io.
+
+let a = [(1,2), (3,4)].
+let c = [(1,2), (3,4)].
+
+-- we want to transform this into a list [(2,1), (4,3)]
+
+let b = a @map(lambda with (x,y) do (y,x)).
+
+io @println(b).
+
+--2d to 3d 
+
+function embed with (x,y) do
+  (x,y, x*y)
+end
+
+let d = c @map(embed).
+
+io @println(d).
