@@ -1,0 +1,7 @@
+load system io.
+
+let str_list = ["hello ", "beautiful ", "world "].
+
+let concat_list = str_list @reduce(lambda with (x,y) do x + y).
+
+io @println(concat_list)

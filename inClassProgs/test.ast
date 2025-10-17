@@ -1,0 +1,13 @@
+load system io.
+
+function f with x do
+  x*x
+end
+
+function g with (q,p) do
+  q(p)
+end
+
+let w = g(f,2).
+
+io @println(w)
