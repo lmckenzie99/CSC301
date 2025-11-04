@@ -1,0 +1,12 @@
+load system math.
+load system io.
+
+function g
+  with (x,y):(%real,%integer) do
+    math@pow(x,y)
+  with _ do
+    throw Error("unknown value")
+end
+
+io @println(g(3.0,2)).
+io @println(g(1.0,2,3)).
