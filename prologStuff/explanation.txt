@@ -1,0 +1,3 @@
+In Prolog, the list notation [Head|Tail] is used to decompose a list into its first element (Head) and the rest of the list (Tail). 
+
+When we write [a,b,c], it can be interpreted as [a|[b,c]], where 'a' is the head and [b,c] is the tail.
