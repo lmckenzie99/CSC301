@@ -1,0 +1,7 @@
+# Language Grammars
+- Rules for building parse trees or derivation trees for sentences in the language defined by the grammar  
+<Sentence>*    ::= <Noun-Phrase> <Verb> <Noun-Phrase>
+<Noun-Phrase>  ::= <Article> <Noun>
+<Verb>         ::= loves | hates | eats
+<Article>      ::= a | the
+<Noun>         ::= dog | cat | rat
