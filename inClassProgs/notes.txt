@@ -5,3 +5,4 @@
 <Verb>         ::= loves | hates | eats
 <Article>      ::= a | the
 <Noun>         ::= dog | cat | rat
+
